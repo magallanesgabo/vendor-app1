@@ -1,0 +1,150 @@
+body{
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%) no-repeat;
+}
+
+.App button[type="submit"] {
+
+	background: #0085FF;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+  	margin-top: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	transition: .3s ease all;
+}
+
+.cardGradiente{
+	background: rgb(235,235,235);
+	background: linear-gradient(180deg, rgba(235,235,235,1) 30%, rgba(255,255,255,1) 80%);
+	margin-top: 20px;
+	border-bottom: 2px solid #cacaca;
+	/* padding-left: 40px !important;
+	padding-right: 40px !important; */
+	width: 90% !important;
+
+}
+
+.CardSlider{
+	background-color: #cacaca;
+	margin: 0;
+   	padding: 0;
+
+}
+
+
+
+@media screen and (min-width: 950px) and (max-width: 1580px)  {
+	.containerCard {
+		margin-top: -290px;
+	}
+}
+
+@media only screen and (max-width : 350px) {
+	.containerCard {
+		margin-top: 20px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1000px) 
+and (orientation : landscape) 
+{
+	.containerCard {
+		margin-top: -180px;
+	}
+
+	.qr_code {
+		width: 58vh;
+	}
+
+	.button_full{
+		width: 58vh;
+	}
+
+	.CardDetail{
+		height: 80px;
+		max-width: 28vh;
+	}
+
+	.cardLogos{
+		max-width: 26vh;
+	}
+
+
+	.imgSlider{
+		max-width: 58vh;
+	}
+
+	.StockVisitor{
+		max-width: 80vh;
+	}
+
+	.ListVendor{
+		max-width: 80vh;
+	}
+
+	.img_sponsor{
+		max-width: 40vh;
+	}
+
+	.img_vendor{
+		max-width: 50vh;
+	}
+
+	.kids_cancer{
+		max-width: 35vh;
+	}
+
+	.logo_barley{
+		max-width: 60vh;
+	}
+
+
+}
+
+
+
+
+
+/* @media only screen and (orientation: landscape) { 
+	.containerCard {
+		margin-top: -180px;
+	}
+
+	.qr_code {
+		width: 52vh;
+	}
+
+	.button_full{
+		width: 52vh;
+	}
+
+	.CardDetail{
+		height: 80px;
+		max-width: 25vh;
+	}
+
+
+	
+} */
+
+@media only screen and (min-width: 1180px) and (orientation: landscape) { 
+	.containerCard {
+		margin-top: -350px;
+	}
+
+}
+
+
+@media (min-width: 1024px) and (orientation: landscape) { 
+	.containerCard {
+		margin-top: -280px;
+	}
+
+}

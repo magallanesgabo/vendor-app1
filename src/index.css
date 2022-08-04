@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'proxima';
+  src: url('./fonts/proxima-regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: 'proxima-nova-extrabold';
+  src: url('./fonts/Proxima-Nova-Extrabold.ttf') format("truetype")
+}
+
+
+.css-f62b50-MuiFormHelperText-root{
+	font-weight: 700 !important;
+	margin-left: 0px !important
+}
+
+.css-1xtiyxh-MuiFormHelperText-root{
+	font-weight: 700 !important;
+	
+}
+
+.css-46bh2p-MuiCardContent-root{
+	padding: 10px !important;
+}
+
+.css-ypfy4n-MuiFormHelperText-root{
+	margin-left: 0px !important
+}
+
+.css-1rtl4xq-MuiFormHelperText-root.Mui-error{
+	margin-left: 0px !important
+}
+
+.css-1706zlt-MuiAvatar-root{
+	border-radius: 50% 50% 50% 0 !important;
+	-ms-transform: rotate(-45deg) !important;
+	-webkit-transform: rotate(-45deg) !important;
+	-moz-transform: rotate(-45deg) !important;
+	-o-transform: rotate(-45deg) !important;
+	transform: rotate(-45deg) !important;
+	width: 30px !important;
+	height: 30px !important;
+
+}
+
+.idAvatar{
+	-ms-transform: rotate(+45deg) !important;
+	-webkit-transform: rotate(+45deg) !important;
+	-moz-transform: rotate(+45deg) !important;
+	-o-transform: rotate(+45deg) !important;
+	transform: rotate(+45deg) !important;
+	font-size: 1.0rem !important;
+	z-index: 1000 !important; 
+	position: relative !important;
+	display: inline-block !important;
+}
+
+.css-ziy3yw{
+	border-radius: 50% 50% 50% 0 !important;
+	-ms-transform: rotate(-45deg) !important;
+	-webkit-transform: rotate(-45deg) !important;
+	-moz-transform: rotate(-45deg) !important;
+	-o-transform: rotate(-45deg) !important;
+	transform: rotate(-45deg) !important;
+	width: 30px !important;
+	height: 30px !important;
+}
+
+.css-1bzwksw{
+	margin: 0 !important;
+}
+
+.css-sfzc31{
+	margin: 0 !important;
+}
+
+.css-1qw96cp{
+	padding: 10px !important;
+}
+
+.containerDowload{
+	margin-top: -140px !important;
+}
+.css-1e9lk82-MuiListItemAvatar-root{
+	min-width: 40px !important;
+}
+
+.css-kjefnu-MuiBottomNavigationAction-label.Mui-selected{
+	text-align: center !important;
+}
+
+.textLabel{
+	margin-bottom: 5px !important;
+	font-weight: 500 !important;
+	font-family: 'proxima-nova-extrabold' !important;
+}
+.css-kjefnu-MuiBottomNavigationAction-label{
+	text-align: center !important;
+}
+
+.css-1btfv4q.Mui-selected{
+	text-align: center;
+}
+
+.qr_code{
+	width: 29vh;
+}
+
+.img_sponsor{
+	max-width: 29vh;
+	width: 100%;
+}
+.img_vendor{
+	max-width: 40vh;
+	width: 100%;
+}
+.kids_cancer{
+	max-width: 20vh;
+	width: 100%;
+}
+
+.logo_barley{
+	max-width: 30vh;
+	width: 100%;
+}
+
+.button_full{
+	width: 29vh;
+}
+
+
+.CardDetail{
+	height: 78px;
+	width: 100%;
+	max-width: 14vh;
+	text-decoration: none;
+}
+
+.cardLogos{
+
+	width: 100%;
+	max-width: 14vh;
+}
+.imgSlider{
+
+	width: 100%;
+	max-width: 28vh;
+}
+
+.StockVisitor{
+	width: 100%;
+	max-width: 36vh;
+}
+
+.ListVendor{
+	text-decoration: none;
+	max-width: 36vh;
+}
+
+.ListVendor{
+	text-decoration: none;
+	max-width: 36vh;
+}
+
+.cardMenu{
+	text-decoration: none;
+}
+
+.text-reset{
+	text-align: center !important;
+}
+
