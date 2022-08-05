@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Html5Qrcode } from "html5-qrcode";
 import axios from 'axios';
 
-const token = localStorage.getItem('token');
 const qrConfig = { fps: 60, qrbox: { width: 200, height: 200 }, rememberLastUsedCamera: true };
+
 let html5QrCode;
 
 const QRscan = (props) => {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     html5QrCode = new Html5Qrcode("reader");
     const token = localStorage.getItem('token');
@@ -27,24 +31,24 @@ const QRscan = (props) => {
         }).then(function (response) {
           console.log(response);
           if(response.status === 201){
-            window.location.href = `/vendor/success`;
+            navigate('/vendor/success');
           }if(response.data.code === 404){
-            window.location.href = `/vendor/invalid`;
+            navigate('/vendor/invalid'); 
           }if(response.data.code === 400){
-            window.location.href = `/vendor/error`;
+            navigate('/vendor/error'); 
           }
         })
         .catch(function (response) {
           console.log(response);
           if(response.data.code === 500){
-            window.location.href = `/vendor/out`;
+            navigate('/vendor/out');
           }
         });
       };
        
     html5QrCode.start(
         { facingMode: "environment" }, qrConfig, qrCodeSuccessCallback );
-  }, []);
+  }, [navigate]);
 
   
   return (
