@@ -9,6 +9,7 @@ let html5QrCode;
 const QRscan = (props) => {
   useEffect(() => {
     html5QrCode = new Html5Qrcode("reader");
+    const token = localStorage.getItem('token');
 
     const qrCodeSuccessCallback = (decodedText, decodedResult) => {
        console.log(decodedText);
@@ -33,22 +34,14 @@ const QRscan = (props) => {
             window.location.href = `/vendor/error`;
           }
         })
-        .catch(function (error) {
-          if (error.response) {
-            // Request made and server responded
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          } else if (error.request) {
-            // The request was made but no response was received
-            console.log(error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message);
+        .catch(function (response) {
+          console.log(response);
+          if(response.data.code === 500){
+            window.location.href = `/vendor/out`;
           }
         });
       };
-
+       
     html5QrCode.start(
         { facingMode: "environment" }, qrConfig, qrCodeSuccessCallback );
   }, []);
