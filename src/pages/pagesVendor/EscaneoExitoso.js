@@ -24,8 +24,8 @@ const EscaneoExitoso = () => {
                     <Grid container spacing={1} mb={10}>
                         <Grid item xs={12} mb={2}>
                         	<Typography variant="h6" component="div" mb={6} gutterBottom>
-                              ITEM OK
-                          </Typography>
+                                Great! Enjoy your meal! Sorry! 
+                            </Typography>
                           	<Box sx={{ 
                                 display: 'flex',
                                 justifyContent: 'center',

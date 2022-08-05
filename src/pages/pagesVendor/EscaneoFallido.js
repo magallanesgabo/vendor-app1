@@ -24,7 +24,7 @@ const EscaneoFallido = () => {
                     <Grid container spacing={1} mb={10}>
                         <Grid item xs={12} mb={2}>
                         	<Typography variant="h6" component="div" mb={6} gutterBottom>
-                            	ITEM NOT AVAILABLE
+                                You don't have more items available in our tend.
                           	</Typography>
                           	<Box sx={{ 
                                 display: 'flex',
