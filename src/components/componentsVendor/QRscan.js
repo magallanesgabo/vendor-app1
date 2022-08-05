@@ -48,15 +48,6 @@ const QRscan = (props) => {
           }
         });
       };
-      
-      axios.interceptors.response.use(response => {
-        return response;
-     }, error => {
-       if (error.response.status === 401) {
-        //window.location.href = `/vendor/scan`;
-       }
-       return error;
-     });
 
     html5QrCode.start(
         { facingMode: "environment" }, qrConfig, qrCodeSuccessCallback );
