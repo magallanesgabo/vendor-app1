@@ -33,10 +33,18 @@ const QRscan = (props) => {
             window.location.href = `/vendor/error`;
           }
         })
-        .catch(function (response) {
-          console.log(response);
-          if(response.data.code === 500){
-            window.location.href = `/vendor/out`;
+        .catch(function (error) {
+          if (error.response) {
+            // Request made and server responded
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
           }
         });
       };
@@ -45,7 +53,7 @@ const QRscan = (props) => {
         return response;
      }, error => {
        if (error.response.status === 401) {
-        window.location.href = `/vendor/scan-code`;
+        //window.location.href = `/vendor/scan`;
        }
        return error;
      });

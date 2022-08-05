@@ -9,10 +9,10 @@ import TableRow from '@mui/material/TableRow';
 
 
 const TableReport = () => {
-  const [product, setProduct] = useState([]);
-  const token = localStorage.getItem('token');
+  const [tickets, setTickets] = useState([]);
+  const token = localStorage.getItem('toke');
 
-  const getProductData = async () => {
+  const getTicketData = async () => {
     try {
       const data = await axios.get(
         "https://api.devrudolf.com/vendors/ticket-scanned",       
@@ -22,46 +22,27 @@ const TableReport = () => {
           }
         }
       );
-      console.log(data.data.tickets);
-      console.log(data);
-      product(data.data.tickets);
-      setProduct(data.data.tickets);
+      console.log(data.data);
+      setTickets(data.data);
     } catch (e) {
       console.log(e);
     }
   };
 
   useEffect(() => {
-    getProductData();
+    getTicketData();
   }, []);
   return (
     <div className="App">
-        {/*{product.map((item) => {
+        {tickets.map((tickets) => {
           return (
             <p>
-              {item.name} - {item.price} - {item.created_at}
+              {tickets.name} - {tickets.price} - {tickets.created_at}
             </p>
           );
-        })} */}
-
-    <TableContainer>
-    <Table sx={{ minWidth: 200 }} aria-label="caption table">
-              <TableHead>
-                  <TableRow style={{fontWeigth: 'Large', fontHeigth: '40px' }}>
-                  <TableCell align="center">Total Tickets Scanned</TableCell>
-              </TableRow>
-              </TableHead>
-        <TableBody>
-        {product.map((item) => {
-          return (
-            <TableRow style={{ boxShadow: 'no', border: 'none' }} key={item.id}>
-                <TableCell align="center" component="th" scope="row"></TableCell>
-            </TableRow>
-          );
-        })}
-
-        </TableBody>
-      </Table>
+        })} 
+    
+    {/*<TableContainer>
           <Table sx={{ minWidth: 200 }} aria-label="caption table">
               <TableHead>
                   <TableRow style={{fontWeigth: 'Large', fontHeigth: '40px' }}>
@@ -74,7 +55,7 @@ const TableReport = () => {
         {product.map((item) => {
           return (
             <TableRow style={{ boxShadow: 'no', border: 'none' }} key={item.id}>
-                <TableCell align="center" component="th" scope="row">{item.name}</TableCell>
+                <TableCell align="center" component="th" scope="row">{item.brand}</TableCell>
                 <TableCell align="center">{item.product_type}</TableCell>
                 <TableCell align="center">{item.created_at}</TableCell>
             </TableRow>
@@ -83,7 +64,7 @@ const TableReport = () => {
 
         </TableBody>
       </Table>
-    </TableContainer>
+      </TableContainer>*/}
     </div>
   );
 };
