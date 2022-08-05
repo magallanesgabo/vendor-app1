@@ -75,7 +75,9 @@ and (orientation : landscape)
 	.cardLogos{
 		max-width: 26vh;
 	}
-
+	.cardRedes{
+		width: 10vh;
+	}
 
 	.imgSlider{
 		max-width: 58vh;
@@ -107,8 +109,6 @@ and (orientation : landscape)
 
 
 }
-
-
 
 
 

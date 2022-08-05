@@ -16,7 +16,7 @@ import api from '../utils/App.js';
 import { AuthContext } from '../auth/AuthContext.js';
 import { types } from '../types/types.js';
 import UserAlert from '../components/AlertMessages/userAlert';
-
+import SocialNetworks from '../components/ImagesView/SocialNetworks.js';
 
 const LoginView = () => {
 
@@ -24,6 +24,12 @@ const LoginView = () => {
     email: '',
     password: ''
   });
+
+  // const {INITIAL_FORM_STATE, FORM_VALIDATION} = FormNew({
+  //   email: 'arneiraz@gmail.com',
+  //   password: 'Bl9*St2*Xd'
+  // });
+
 
   const [condicion, condicion2] = useState(false);
   const navigate = useNavigate();
@@ -110,6 +116,9 @@ const LoginView = () => {
           </Formik>
           <LogoKids />
         </Container>
+        <Grid container spacing={1} mb={2} mt={2}>
+          <SocialNetworks />
+        </Grid>
       </Grid>
 
     </>

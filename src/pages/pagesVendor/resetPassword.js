@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { Link } from 'react-router-dom';
 import {
@@ -12,15 +12,13 @@ import Logo from '../../components/ImagesView/Logo';
 import LogoKids from '../../components/ImagesView/LogoKids.js';
 import { FormNew } from '../../helpers/FormNew.js';
 import api from '../../utils/App.js';
-import RegisterAlert from '../../components/AlertMessages/registerAlert';
+import SocialNetworks from '../../components/ImagesView/SocialNetworks.js';
 
 const ResetPassword = () => {
 
   const {INITIAL_FORM_STATE, FORM_VALIDATION_RESET} = FormNew({
     email: '',
   });
-
-  const [condicion, condicion2] = useState(false);
 
   const onSubmit = async  (values, props) => {
 
@@ -67,12 +65,14 @@ const ResetPassword = () => {
                         <Link to={'/'} style={{color:'#000'}}>Go to Login Page</Link>
                     </Typography>          
                 </Grid>
-                { condicion && <RegisterAlert/> }       
               </Form>
           )}
           </Formik>
           <LogoKids />
         </Container>
+        <Grid container spacing={1} mb={2} mt={2}>
+          <SocialNetworks />
+        </Grid>
       </Grid>
 
     </>

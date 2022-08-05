@@ -4,23 +4,23 @@ import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { AuthContext } from '../auth/AuthContext';
 
-const PrivateRoute = ({children}) => {
+const PrivateAdminRoute = ({children}) => {
 
   const {user, user:{rol}} = useContext(AuthContext);
 
-  if(user.logged && rol === 'Vendor'){
+  if(user.logged && rol === 'Administrator'){
     return children
-  }else if(user.logged && rol === 'Administrator'){
-    return <Navigate to='/admin/home' replace={true} />
+  }else if(user.logged && rol === 'Vendor'){
+    return <Navigate to='/vendor/home' replace={true} />
   }else{
     return <Navigate to='/' replace={true} />
   }
 
 }
 
-PrivateRoute.prototype = {
+PrivateAdminRoute.prototype = {
   isAuthenticated: PropTypes.bool.isRequired,
   component: PropTypes.func.isRequired
 }
 
-export default PrivateRoute
+export default PrivateAdminRoute

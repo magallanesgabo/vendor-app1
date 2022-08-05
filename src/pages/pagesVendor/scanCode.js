@@ -17,7 +17,7 @@ const ScanCode = () => {
                 <Container maxWidth="xs" className='cardGradiente' sx={{paddingTop: '60px', textAlign: 'center'}}>
                     <Grid container spacing={1} mb={10}>
                         <Grid item xs={12}>
-                            <QrScanner />
+                            <QrScanner/> 
                         </Grid>
                         <CardLogos />
                         <Grid item xs={12}>

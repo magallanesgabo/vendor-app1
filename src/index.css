@@ -94,10 +94,12 @@ body {
 }
 
 .textLabel{
-	margin-bottom: 5px !important;
+	margin-bottom: 2px !important;
 	font-weight: 500 !important;
 	font-family: 'proxima-nova-extrabold' !important;
+	text-align: left;
 }
+
 .css-kjefnu-MuiBottomNavigationAction-label{
 	text-align: center !important;
 }
@@ -145,6 +147,12 @@ body {
 	width: 100%;
 	max-width: 14vh;
 }
+
+.cardRedes{
+	width: 100%;
+	width: 4vh;
+}
+
 .imgSlider{
 
 	width: 100%;

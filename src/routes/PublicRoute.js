@@ -6,10 +6,21 @@ import { AuthContext } from '../auth/AuthContext';
 
 const PublicRoute = ({children}) => {
 
-    const {user} = useContext(AuthContext);
-    return user.logged
-      ? <Navigate to='/vendor/home' replace={true} />
-      : children
+    const {user, user:{rol}} = useContext(AuthContext);
+    
+    if(user.logged && rol === 'Vendor'){
+
+      return <Navigate to='/vendor/home' replace={true} />
+
+    }else if(user.logged && rol === 'Administrator'){
+
+      return <Navigate to='/admin/home' replace={true} />
+
+    }else{
+      return children
+    }
+
+
 }
 
 

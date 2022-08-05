@@ -6,7 +6,7 @@ const userAlert = () => {
   return (
     <Stack sx={{ width: '100%' }} spacing={2}>
       <Alert variant="filled" severity="error">
-        Invalid username and/or password. Please try again.
+        Incorrect Username or Password — Please try again.!
       </Alert>    
     </Stack>
   );
