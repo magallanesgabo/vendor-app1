@@ -23,8 +23,9 @@ const TableReport = () => {
         }
       );
       console.log(data.data.tickets);
+      console.log(data);
       product(data.data.tickets);
-      setProduct(data.data);
+      setProduct(data.data.tickets);
     } catch (e) {
       console.log(e);
     }
@@ -73,7 +74,7 @@ const TableReport = () => {
         {product.map((item) => {
           return (
             <TableRow style={{ boxShadow: 'no', border: 'none' }} key={item.id}>
-                <TableCell align="center" component="th" scope="row">{item.tickets.name}</TableCell>
+                <TableCell align="center" component="th" scope="row">{item.name}</TableCell>
                 <TableCell align="center">{item.product_type}</TableCell>
                 <TableCell align="center">{item.created_at}</TableCell>
             </TableRow>

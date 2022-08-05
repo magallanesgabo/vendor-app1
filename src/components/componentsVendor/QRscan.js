@@ -27,15 +27,19 @@ const QRscan = (props) => {
           console.log(response);
           if(response.statusText === 'Created'){
            window.location.href = `/vendor/success`;
-          }if(response.data.code === 404){
-            window.location.href = `/vendor/invalid`;
           }if(response.data.code === 400){
             window.location.href = `/vendor/error`;
+          }if(response.data.code === 404){
+            window.location.href = `/vendor/invalid`;
           }
         })
         .catch(function (response) {
           console.log(response);
-          if(response.data.code === 500){
+          if(response.data.code === 404){
+            window.location.href = `/vendor/invalid`;
+          }if(response.data.code === 400){
+            window.location.href = `/vendor/error`;
+          }if(response.data.code === 500){
             window.location.href = `/vendor/out`;
           }
         });
